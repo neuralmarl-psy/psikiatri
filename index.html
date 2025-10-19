@@ -1,173 +1,552 @@
-:root{
-  --bg:#0a2540;
-  --text:#0b1320;
-  --muted:#4b5563;
-  --surface:#ffffff;
-  --border:rgba(12, 22, 40, 0.09);
-  --accent-1:#5b9dff;
-  --accent-2:#7de1d1;
-  --accent-3:#ffe69b;
-  --wa:#25D366;
-  --viber:#7F4DA0;
-  --fb:#1877F2;
-  --li:#0A66C2;
-  --shadow:0 10px 30px rgba(10,37,64,.14);
-  --radius:14px;
-  --radius-lg:20px;
-  --maxw:1100px;
-  --step--1: clamp(0.95rem, 0.92rem + 0.1vw, 1.0rem);
-  --step-0:  clamp(1.00rem, 0.96rem + 0.25vw, 1.10rem);
-  --step-1:  clamp(1.15rem, 1.05rem + 0.45vw, 1.30rem);
-  --step-2:  clamp(1.35rem, 1.18rem + 0.75vw, 1.70rem);
-  --step-3:  clamp(1.70rem, 1.40rem + 1.00vw, 2.20rem);
-  --gutter-min:16px;
-  --gutter-ideal:4vw;
-  --gutter-max:24px;
-  --gutter: clamp(var(--gutter-min), var(--gutter-ideal), var(--gutter-max));
-}
+<!doctype html>
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Noto Sans,Ubuntu,Cantarell,'Segoe UI Variable','Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 500px at 20% -10%, #eef7ff 0%, transparent 60%),
-    radial-gradient(1200px 500px at 80% -10%, #eafff9 0%, transparent 60%),
-    linear-gradient(180deg,#fff 0%,#f8fbff 100%);
-  line-height:1.6;
-  overflow-x:hidden;
-}
+<html lang="sq">
 
-img,picture,video,canvas,svg{max-width:100%;height:auto}
-iframe{max-width:100%}
+<head>
 
-.container{
-  max-width:var(--maxw);
-  margin-left:auto;
-  margin-right:auto;
-  padding-left:var(--gutter);
-  padding-right:var(--gutter);
-}
+  <meta charset="utf-8" />
 
-@supports (padding-inline: 1px){
-  .container{padding-inline:var(--gutter)}
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-@supports (padding-left: max(0px)){
-  .container{
-    padding-left:max(var(--gutter),env(safe-area-inset-left));
-    padding-right:max(var(--gutter),env(safe-area-inset-right));
+  <title>Dr. Pasho Maksuti, PhD – Psikiatër në Tiranë | Psikiatri.com</title>
+
+  <meta name="description" content="Dr. Pasho Maksuti, PhD – psikiatër në Tiranë me 30+ vite përvojë në fusha të ndryshme të psikiatrisë. Konsulta të sigurta, të personalizuara dhe të bazuara në evidenca. Adresa: Bulevardi Gjergj Fishta, pallati Titan, shkalla 3, ap. 2. Tel: +355 69220280." />
+
+	<meta name="keywords" content="psikiater, psikiatri me i mire ne Shqiperi, psikiatër Tiranë, psikiatër privat, psikiatri Shqipëri, Pasho Maksuti, Dr Pasho Maksuti, depresion, ankth, stres, burnout, lodhje mendore, pagjumësi, çrregullime gjumi, OCD, çrregullimi obsesiv kompulsiv, PTSD, traumë, ADHD, skizofreni, halucinacione, të dëgjuarit zëra, bipolar, sulme paniku, fobi, varësi, ndihmë për alkool, ndihmë për drogë, ndihmë për heroinë, abuzim me substanca, shëndeti mendor i të rinjve, panik, alkool, ndihme per vares nga kumari, ndihme per varesi nga bixhozi, obsesion, atak paniku, psikiatri.com" />	
+
+
+
+  <!-- Canonical + hreflang -->
+
+  <link rel="canonical" href="https://psikiatri.com/" />
+
+  <link rel="alternate" href="https://psikiatri.com/" hreflang="sq-AL" />
+
+  <link rel="alternate" href="https://psikiatri.com/en.html" hreflang="en" />
+
+  <link rel="alternate" href="https://psikiatri.com/" hreflang="x-default" />
+
+
+
+  <!-- Open Graph / Twitter -->
+
+  <meta property="og:type" content="website" />
+
+  <meta property="og:title" content="Dr. Pasho Maksuti, PhD – Psikiatër në Tiranë" />
+
+  <meta property="og:description" content="30+ vite përvojë. Konsulta psikiatrike të personalizuara dhe të sigurta." />
+
+  <meta property="og:url" content="https://psikiatri.com/" />
+
+  <meta property="og:locale" content="sq_AL" />
+
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta property="og:image" content="data:image/svg+xml;charset=utf-8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='1200' height='630' fill='%230a2540'/><text x='60' y='200' fill='white' font-size='72' font-family='Arial,Helvetica,sans-serif'>Psikiatri.com</text><text x='60' y='300' fill='%23a0c4ff' font-size='48' font-family='Arial,Helvetica,sans-serif'>Dr. Pasho Maksuti, PhD</text><text x='60' y='380' fill='white' font-size='36' font-family='Arial,Helvetica,sans-serif'>Psikiatër në Tiranë</text></svg>" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230a2540'/%3E%3Cpath d='M16 22h20a10 10 0 010 20H30' fill='none' stroke='%23a0c4ff' stroke-width='4'/%3E%3Ccircle cx='28' cy='42' r='4' fill='%23a0c4ff'/%3E%3C/svg%3E" />
+
+
+
+  <!-- Structured Data: Physician (extended) -->
+
+  <script type="application/ld+json">
+
+  {
+
+    "@context":"https://schema.org",
+
+    "@type":"Physician",
+
+    "name":"Dr. Pasho Maksuti, PhD",
+
+    "image":"https://psikiatri.com/assets/img/pasho.png",
+
+    "url":"https://psikiatri.com/",
+
+    "telephone":"+35569220280",
+
+    "email":"pashomaksuti@yahoo.com",
+
+    "medicalSpecialty":"Psychiatry",
+
+    "worksFor":{"@type":"Hospital","name":"QSU 'Nënë Tereza' (QSUT)","address":{"@type":"PostalAddress","addressLocality":"Tiranë","addressCountry":"AL"}},
+
+    "memberOf":[
+
+  {
+
+    "@type":"Organization",
+
+    "name":"Lidhja e Psikiatërve Shqiptarë (LPSH)",
+
+    "roleName":"Bashkëthemelues & President (2012–2014)"
+
   }
-}
 
-@supports (padding-left: constant(safe-area-inset-left)){
-  .container{
-    padding-left:max(var(--gutter),constant(safe-area-inset-left));
-    padding-right:max(var(--gutter),constant(safe-area-inset-right));
+],
+
+
+
+    "hasCredential":["PhD", "MD"],
+
+    "knowsAbout": [
+
+	  "Depresion", "Ankth", "Stres", "Burnout", "Pagjumësi", "Çrregullime gjumi",
+
+	  "OCD", "Çrregullimi obsesiv kompulsiv", "PTSD", "Traumë", "ADHD",
+
+	  "Skizofreni", "Halucinacione", "Të dëgjuarit zëra", "Çrregullim bipolar",
+
+	  "Sulme paniku", "Fobi", "Varësi", "Ndihmë për alkool", "Ndihmë për drogë",
+
+	  "Ndihmë për heroinë", "Abuzim me substanca", "Shëndeti mendor i të rinjve"
+
+	],
+
+    "address":{"@type":"PostalAddress","streetAddress":"Bulevardi Gjergj Fishta, pallati Titan, shkalla 3, ap. 2","addressLocality":"Tiranë","addressCountry":"AL"},
+
+    "geo":{"@type":"GeoCoordinates","latitude":41.3229805,"longitude":19.8121030},
+
+    "areaServed":"Albania",
+
+    "sameAs":["https://www.facebook.com/pasho.maksuti/","https://al.linkedin.com/in/pasho-maksuti-8514a033"]
+
   }
-}
 
-.section{padding:64px 0}
-h1{font-size:var(--step-3);line-height:1.15;margin:.2em 0 .35em}
-h2{font-size:var(--step-2);line-height:1.2;margin:.15em 0 .5em;position:relative;padding-bottom:.2rem}
-h2::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:4px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));border-radius:3px}
-h3{font-size:var(--step-1);line-height:1.25;margin:.2em 0 .35em}
-p{font-size:var(--step-0);color:#1f2937;margin:.4em 0 .8em}
-a{color:var(--bg);text-decoration:none}
-a:hover{text-decoration:underline}
+  </script>
 
-.icon{width:1.1em;height:1.1em;vertical-align:-0.15em;margin-right:6px}
-.link-wa{color:var(--wa)}
-.link-viber{color:var(--viber)}
-.link-fb{color:var(--fb)}
-.link-li{color:var(--li)}
-.logo-img{width:34px;height:34px;display:block;border-radius:10px}
 
-.site-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.8);
-  backdrop-filter:saturate(180%) blur(10px);
-  border-bottom:1px solid var(--border);
-  transition:box-shadow .25s ease;
-}
-.site-header[data-scrolled="true"]{box-shadow:var(--shadow)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
-.brand-text{font-size:1.05rem}
-.brand-text .dot{color:var(--accent-1)}
-.nav .menu{display:flex;gap:16px;list-style:none;margin:0;padding:0}
-.nav-toggle{display:none;background:none;border:none;font-size:24px}
-.cta{
-  background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-  color:#0b1320;padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none;
-  box-shadow:0 6px 16px rgba(91,157,255,.28);
-}
-.cta:hover{filter:brightness(1.05)}
-.nav .lang{padding:6px 10px;border:1px solid var(--border);border-radius:10px}
 
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;padding:72px 0}
-.hero-ctas{display:flex;gap:10px;margin:16px 0 6px}
-.btn{
-  display:inline-block;border-radius:12px;padding:11px 16px;font-weight:700;text-decoration:none;line-height:1;
-  border:1px solid var(--border);
-  font-size:var(--step-0);background:linear-gradient(180deg,#fff,#fafdff);
-}
-.btn.primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#0b1320;border:none}
-.btn.ghost{background:linear-gradient(180deg,#fff,#f6fbff)}
-.badges{display:flex;gap:10px;flex-wrap:wrap;padding:0;margin:12px 0 0;list-style:none}
-.badges li{background:linear-gradient(180deg,#eef5ff,#e7faff);color:#0a2540;padding:6px 10px;border-radius:999px;font-size:var(--step--1);border:1px solid #d8ecff}
+  <!-- Publications list (titles only) -->
 
-.portrait-card{margin:0;padding:14px;background:linear-gradient(180deg,#ffffff,#f7fbff);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);text-align:center}
-.portrait-card img{max-width:100%;width:100%;height:auto;border-radius:12px}
-.portrait-card figcaption{font-size:.95rem;color:var(--muted);margin-top:8px}
+  <script type="application/ld+json">
 
-.grid{display:grid;gap:18px}
-.cards{grid-template-columns:repeat(4,1fr)}
-.card{background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
-.card h3{margin-top:0}
-.two-col{display:grid;grid-template-columns:1fr .9fr;gap:22px}
+  {
 
-.timeline{display:grid;gap:14px}
-.t-item{border-left:5px solid var(--accent-2);padding:10px 14px;background:#fff;border-radius:12px;box-shadow:var(--shadow)}
+    "@context":"https://schema.org",
 
-.pub-list{margin:0;padding-left:18px;font-size:var(--step-0)}
-.pub-list li{margin:.35em 0}
+    "@type":"ItemList",
 
-.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
-.map-embed{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#0001}
-.map-embed iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
-.map-embed.small iframe{aspect-ratio:4/3}
+    "name":"Botime të përzgjedhura",
 
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.link-big{font-weight:800;font-size:var(--step-1)}
+    "itemListElement":[
 
-.site-footer{margin-top:56px;border-top:1px solid var(--border);background:linear-gradient(180deg,#f7faff,#f3fbff)}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 0}
-.footer-inner nav a{margin-right:12px}
+      {"@type":"ListItem","position":1,"item":{"@type":"ScholarlyArticle","headline":"Krahasimi i Risperidonit dhe Haloperidolit në skizofreni","datePublished":"2004","author":{"@type":"Person","name":"Pasho Maksuti"}}},
 
-.floating-call{
-  position:fixed;bottom:18px;right:18px;width:56px;height:56px;border-radius:50%;
-  display:grid;place-items:center;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-  color:#0b1320;text-decoration:none;font-size:26px;box-shadow:0 12px 30px rgba(0,0,0,.2);z-index:60;
-}
+      {"@type":"ListItem","position":2,"item":{"@type":"ScholarlyArticle","headline":"Epidemiologjia e vetëvrasjeve në Tiranë, 2001–2010","datePublished":"2012/2015","author":{"@type":"Person","name":"Pasho Maksuti"}}},
 
-@media (max-width:1080px){
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .contact-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:900px){
-  .two-col{grid-template-columns:1fr}
-  .hero{grid-template-columns:1fr;padding:56px 0}
-}
-@media (max-width:720px){
-  .nav .menu{display:none;position:absolute;right:12px;top:64px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px;flex-direction:column;gap:8px;width:min(88vw,320px);box-shadow:var(--shadow)}
-  .nav-toggle{display:inline-block}
-  .cards{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .map-grid{grid-template-columns:1fr}
-}
+      {"@type":"ListItem","position":3,"item":{"@type":"ScholarlyArticle","headline":"Strategji trajtimi për skizofreni rezistente","datePublished":"2017","author":{"@type":"Person","name":"Pasho Maksuti"}}},
 
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-}
+      {"@type":"ListItem","position":4,"item":{"@type":"ScholarlyArticle","headline":"Depresioni, ankthi dhe stresi te studentët shqiptarë","datePublished":"2022","author":{"@type":"Person","name":"Pasho Maksuti"}}}
+
+    ]
+
+  }
+
+  </script>
+
+
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+
+<body>
+
+  <!-- SVG ICON SPRITE (inline; used sitewide) -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.9 15.9 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.23c1.2.5 2.6.77 4 .77a1 1 0 011 1v3.6a1 1 0 01-1 1C10 22.34 1.66 14 1.28 3.4a1 1 0 011-1H5.9a1 1 0 011 1c0 1.4.27 2.8.77 4a1 1 0 01-.23 1.1l-2.83 2.2z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.3l-10 6.3L2 6.3V6zm0 2.2l9.5 6a1 1 0 001 0L22 8.2V18a2 2 0 01-2 2H4a2 2 0 01-2-2V8.2z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-wa" viewBox="0 0 24 24"><path d="M12 2a9 9 0 00-7.6 13.8L3 22l6.4-1.3A9 9 0 1012 2zm5.3 13.1c-.2.6-1.1 1-1.8 1-1.5 0-3.3-.8-4.5-2a6.9 6.9 0 01-1.8-3.4c0-.7.4-1.6 1-1.8.3-.1.7 0 1 .4l.8 1c.2.3.2.6 0 .8l-.4.5c.4.9 1.5 2 2.4 2.4l.5-.3c.3-.2.6-.2.9 0l1 .7c.4.3.5.7.4 1z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-viber" viewBox="0 0 24 24"><path d="M6 3h12a3 3 0 013 3v8a3 3 0 01-3 3h-4l-3.5 3.5c-.6.6-1.5.2-1.5-.6V17H6a3 3 0 01-3-3V6a3 3 0 013-3zm9.6 2.9a.8.8 0 01.8.8 7.5 7.5 0 01-7.5 7.5.8.8 0 110-1.6 5.9 5.9 0 005.9-5.9.8.8 0 01.8-.8zm-3 0a.8.8 0 01.8.8 4.5 4.5 0 01-4.5 4.5.8.8 0 010-1.6 2.9 2.9 0 002.9-2.9.8.8 0 01.8-.8z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-fb" viewBox="0 0 24 24"><path d="M13 22v-8h3l.5-3H13V9a1.7 1.7 0 011.9-1.8H17V4.1C16.6 4 15.5 4 14.3 4c-2.5 0-4.2 1.5-4.2 4.1v2H7v3h3v8h3z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-li" viewBox="0 0 24 24"><path d="M6 8H3V21h3V8zM4.5 3a1.7 1.7 0 100 3.5A1.7 1.7 0 004.5 3zM21 21h-3v-6.5c0-1.6-.6-2.5-1.9-2.5-1 0-1.6.6-1.9 1.3V21h-3V8h3v1.8c.4-.6 1.3-1.8 3.1-1.8 2.2 0 3.7 1.5 3.7 4.7V21z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="M15.5 4l-7 3-6-3v15l6 3 7-3 6 3V7l-6-3zm-7 4l7-3v12l-7 3V8z" fill="currentColor"/></symbol>
+
+    <symbol id="icon-street" viewBox="0 0 24 24"><path d="M12 2a4 4 0 110 8 4 4 0 010-8zM4 22a8 8 0 0116 0H4z" fill="currentColor"/></symbol>
+
+  </svg>
+
+
+
+  <header class="site-header" data-scrolled="false">
+
+    <div class="container header-inner">
+
+      <a class="brand" href="/" aria-label="Psikiatri.com">
+
+        <span class="logo">Ψ</span>
+
+        <span class="brand-text">Psikiatri<span class="dot">.com</span></span>
+
+      </a>
+
+      <nav class="nav" aria-label="Kryesore">
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+
+        <ul id="menu" class="menu">
+
+          <li><a href="#services">Shërbimet</a></li>
+
+          <li><a href="#benefits">Përfitimet</a></li>
+
+          <li><a href="#process">Si funksionon</a></li>
+
+          <li><a href="#career">Karriera</a></li>
+
+          <li><a href="#research">Punë Kërkimore & Botime</a></li>
+
+          <li><a href="#location">Harta</a></li>
+
+          <li><a href="#contact">Kontakte</a></li>
+
+         <li>
+
+  <a class="lang" href="en.html" hreflang="en" aria-label="English version (US/UK)">
+
+    <span class="flag-emoji" aria-hidden="true">🇺🇸</span>/<span class="flag-emoji" aria-hidden="true">🇬🇧</span>
+
+  </a>
+
+</li>
+
+
+
+        </ul>
+
+      </nav>
+
+      <a class="cta" href="tel:+35569220280"><svg class="icon"><use href="#icon-phone"></use></svg>Telefononi</a>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="main">
+
+    <section class="hero container">
+
+      <div class="hero-text">
+
+        <h1>Dr. Pasho Maksuti, PhD — Psikiatër</h1>
+
+        <p>30+ vite përvojë në fusha të ndryshme të psikiatrisë: çrregullimet e humorit, çrregullimet e personalitetit, depresioni, ankthi, psikozat, traumat, obsesionet, varësitë dhe shëndeti mendor i të rinjve. Qasje bashkëkohore, e sigurt dhe e personalizuar.</p>
+
+        <div class="hero-ctas">
+
+          <a class="btn primary" href="tel:+35569220280"><svg class="icon"><use href="#icon-phone"></use></svg>Rezervo me telefon</a>
+
+          <a class="btn ghost link-wa" href="https://wa.me/35569220280" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-wa"></use></svg>WhatsApp</a>
+
+          <a class="btn ghost link-viber" href="viber://chat?number=%2B35569220280"><svg class="icon"><use href="#icon-viber"></use></svg>Viber</a>
+
+        </div>
+
+        <ul class="badges" aria-label="Pikat kryesore">
+
+          <li>✔ 30+ vite përvojë</li>
+
+          <li>✔ Vlerësim i qartë & plan i thjeshtë</li>
+
+          <li>✔ Kujdes i vazhdueshëm</li>
+
+          <li>✔ Konsulta në klinikë</li>
+
+		  <li>✔ Konsulta Online</li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- Portrait -->
+
+      <figure class="portrait-card">
+
+        <picture>
+
+          <img src="assets/img/pasho.png" alt="Dr. Pasho Maksuti, Psikiatër" loading="lazy" decoding="async" />
+
+        </picture>
+
+        <figcaption>Dr. Pasho Maksuti, PhD</figcaption>
+
+      </figure>
+
+    </section>
+
+
+
+    <section id="services" class="section container">
+
+      <h2>Shërbimet</h2>
+
+      <div class="grid cards">
+
+        <article class="card"><h3>Konsultë psikiatrike</h3><p>Vlerësim i strukturuar, shpjegime të qarta dhe rekomandime të personalizuara.</p></article>
+
+        <article class="card"><h3>Menaxhim i çrregullimeve të humorit</h3><p>Qasje të përditësuara për depresionin dhe spektrin bipolar.</p></article>
+
+        <article class="card"><h3>Menaxhim i ankthit</h3><p>Strategji praktike për ankthin e përgjithësuar, panikun dhe fobitë.</p></article>
+
+        <article class="card"><h3>Mbështetje për varësitë</h3><p>Udhëzime të qarta për stabilizim dhe reduktim rreziku.</p></article>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="benefits" class="section container">
+
+      <h2>Përfitimet për pacientin</h2>
+
+      <div class="grid cards">
+
+        <article class="card"><h3>Qartësi & thjeshtësi</h3><p>Plane të arritshme dhe të efektshme.</p></article>
+
+        <article class="card"><h3>Diskrecion & siguri</h3><p>Privatësi dhe standarde klinike të sigurta.</p></article>
+
+        <article class="card"><h3>Ndjekje e rregullt</h3><p>Rishikime që përshtaten me ecurinë tuaj.</p></article>
+
+        <article class="card"><h3>Udhëzim për familjen</h3><p>Mbështetje praktike për të afërmit kur është e dobishme.</p></article>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="process" class="section container">
+
+      <h2>Si funksionon vizita e parë</h2>
+
+      <div class="timeline">
+
+        <div class="t-item"><h3>1) Kontakt i shpejtë</h3><p>Telefononi ose dërgoni mesazh në WhatsApp/Viber.</p></div>
+
+        <div class="t-item"><h3>2) Vlerësim i qartë</h3><p>Bisedë e strukturuar mbi simptomat dhe qëllimet.</p></div>
+
+        <div class="t-item"><h3>3) Plan i personalizuar</h3><p>Hapa konkretë që mund t’i ndiqni menjëherë.</p></div>
+
+        <div class="t-item"><h3>4) Ndjekje</h3><p>Rishikime për të siguruar mirëqenien.</p></div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="career" class="section container">
+
+      <h2>Karriera në Psikiatri</h2>
+
+      <div class="timeline">
+
+        <div class="t-item">
+
+          <h3>QSU “Nënë Tereza” — psikiatër</h3>
+
+          <p>Që nga vitet ’90 në shërbim mjekësor universitar; 30+ vite i përkushtuar për të ndihmuar pacientët me shëndetin mendor.</p>
+
+        </div>
+
+		<div class="t-item">
+
+		  <h3>Mentorim & komunitet</h3>
+
+		  <p>Mbështetje e psikiatërve të rinj. Bashkëthemelues i LPSH (Lidhja e Psikiatërve Shqiptarë), ku është  dhe ka shërbyer si President (2012–2014).</p>
+
+		</div>
+
+
+
+      </div>
+
+    </section>
+
+
+
+    <section id="research" class="section container">
+
+
+      <h2>Punë Kërkimore & Botime të përzgjedhura</h2>
+
+      <ul class="pub-list">
+
+        <li>Krahasimi i Risperidonit dhe Haloperidolit në skizofreni (2004)</li>
+
+        <li>Epidemiologjia e vetëvrasjeve në Tiranë, 2001–2010 (2012/2015)</li>
+
+        <li>Strategji trajtimi për skizofreni rezistente (2017)</li>
+
+        <li>Depresioni, ankthi dhe stresi te studentët shqiptarë (2022)</li>
+
+      </ul>
+
+    </section>
+
+
+
+    <section id="location" class="section container">
+
+      <h2>Adresa & Harta</h2>
+
+      <p><strong>Klinika ndodhet në adresën:</strong> Bulevardi Gjergj Fishta, pallati Titan, shkalla 3, ap. 2, Tiranë</p>
+
+
+
+      <div class="map-grid">
+
+        <div>
+
+          <h3><svg class="icon"><use href="#icon-street"></use></svg>Pamje nga rruga</h3>
+
+          <div class="map-embed small">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1760825955623!6m8!1m7!1s1bJ1HLxBrIP9rSQw3ik55A!2m2!1d41.32298293721725!2d19.8129325367387!3f354.01609333565744!4f26.201601410028246!5f0.4000000000000002" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shikim i rrugës - Klinika Psikiatrike"></iframe>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <h3><svg class="icon"><use href="#icon-map"></use></svg>Harta</h3>
+
+          <div class="map-embed small">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.08774727912!2d19.812103028503987!3d41.32298050536826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350318e0a521dd7%3A0x599cfc4ee5452fb4!2sKlinike%20Psikiatrike%20Dr.Pasho%20Maksuti!5e0!3m2!1sen!2s!4v1760826034324!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harta - Klinika Psikiatrike"></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="contact" class="section container">
+
+      <h2>Kontakte</h2>
+
+      <div class="contact-grid">
+
+        <div class="card">
+
+          <h3>Telefon</h3>
+
+          <p><a class="link-big" href="tel:+35569220280"><svg class="icon"><use href="#icon-phone"></use></svg>+355 69220280</a></p>
+
+          <p>
+
+            <a class="link-wa" href="https://wa.me/35569220280" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-wa"></use></svg>WhatsApp</a>
+
+            ·
+
+            <a class="link-viber" href="viber://chat?number=%2B35569220280"><svg class="icon"><use href="#icon-viber"></use></svg>Viber</a>
+
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Email</h3>
+
+          <p><a class="link-big" href="mailto:pashomaksuti@yahoo.com"><svg class="icon"><use href="#icon-email"></use></svg>pashomaksuti@yahoo.com</a></p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Rrjete sociale</h3>
+
+          <p>
+
+            <a class="link-fb" href="https://www.facebook.com/pasho.maksuti/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-fb"></use></svg>Facebook</a>
+
+            ·
+
+            <a class="link-li" href="https://al.linkedin.com/in/pasho-maksuti-8514a033?utm_source=chatgpt.com" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-li"></use></svg>LinkedIn</a>
+
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Adresa</h3>
+
+          <p>Bulevardi Gjergj Fishta, pallati Titan, shkalla 3, ap. 2<br/>Tiranë, Shqipëri</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <a class="floating-call" href="tel:+35569220280" aria-label="Telefononi Dr. Pasho">📞</a>
+
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <strong>Psikiatri.com</strong> — Dr. Pasho Maksuti, PhD
+
+        <br/>© <span id="year"></span> Të gjitha të drejtat e rezervuara.
+
+      </div>
+
+      <nav aria-label="Fundi">
+
+        <a href="/">Kreu</a>
+
+        <a href="#services">Shërbimet</a>
+
+        <a href="#benefits">Përfitimet</a>
+
+        <a href="en.html" hreflang="en">English</a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="assets/js/script.js" defer></script>
+
+</body>
+
+</html>
